@@ -8,7 +8,8 @@
         Height="350"
         Width="700"
         Icon="equals.ico"
-        MinWidth="400">
+        MinWidth="400"
+        MaxWidth="800">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel.Background>
