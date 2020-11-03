@@ -5,13 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Formulario StackPanel"
-        Height="350"
+        Height="370"
         Width="700"
         Icon="equals.ico"
         MinWidth="400"
         MaxWidth="800">
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Vertical" Margin="10">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" 
+                    Value="100" />
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="Orientation"
+                    Value="Vertical" />
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel>
+        <StackPanel>
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -20,14 +42,11 @@
                     <GradientStop Color="#FF0ACB00" />
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Text="Nombre"
-                       FontSize="16"
-                       FontWeight="Bold"
-                       Margin="5,5,5,0"/>
+            <TextBlock Text="Nombre"/>
             <TextBox Margin="5,0,5,20"/>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="10">
+        <StackPanel>
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -37,16 +56,11 @@
                                   Offset="0.896" />
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Text="Dirección"
-                       FontSize="16"
-                       FontWeight="Bold"
-                       Margin="5,5,5,0"/>
+            <TextBlock Text="Dirección"/>
             <TextBox Margin="5,0,5,20" />
-
-
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="10" >
+        <StackPanel>
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -56,22 +70,15 @@
                                   Offset="0.859" />
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Text="Correo electrónico"
-                       FontSize="16"
-                       FontWeight="Bold"
-                       Margin="5,5,5,0" />
+            <TextBlock Text="Correo electrónico" />
             <TextBox Margin="5,0,5,20"
                      MinWidth="575"
                      HorizontalAlignment="Left"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <Button Width="100"
-                    Content="Aceptar"
-                    Margin="5" />
-            <Button Width="100"
-                    Content="Cancelar"
-                    Margin="5" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button Content="Aceptar"/>
+            <Button Content="Cancelar"/>
         </StackPanel>
     </StackPanel>
 </Window>
